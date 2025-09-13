@@ -1,27 +1,27 @@
 
-// main.js
-
 window.onload = () => {
   const c = setTimeout(() => {
-    // hilangin class not-loaded -> animasi bunga jalan
     document.body.classList.remove("not-loaded");
 
-    // teks yang mau ditulis
-    const titles = "Untukmu, Bunga terakhir dariku. semoga kau menyimpannya dengan indah".split('');
+    const titles = "  For you, My last flower. Please keep it beautifully".split('');
     const titleElement = document.getElementById('title');
+
+    // atur ukuran font lewat JS juga, opsional
+    titleElement.style.fontSize = '2.0rem'; // <<< kecilin font
+    titleElement.style.letterSpacing = '4px'; // <<< jarak antar huruf
+
     let index = 0;
 
-    // fungsi nulis huruf 1 per 1
     function appendTitle() {
       if (index < titles.length) {
         titleElement.innerHTML += titles[index];
         index++;
-        setTimeout(appendTitle, 300); // jeda 300ms per huruf
+        setTimeout(appendTitle, 300);
       }
     }
 
     appendTitle();
 
     clearTimeout(c);
-  }, 1000); // delay sebelum mulai animasi
+  }, 1000);
 };
