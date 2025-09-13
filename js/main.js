@@ -7,7 +7,7 @@ window.onload = () => {
     document.body.classList.remove("not-loaded");
 
     // teks yang mau ditulis
-    const titles = "I LOVE U TO THE MOON AND BACK".split('');
+    const titles = "Untukmu, Bunga terakhir dariku. semoga kau menyimpannya dengan indah".split('');
     const titleElement = document.getElementById('title');
     let index = 0;
 
